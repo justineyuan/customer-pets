@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Customer Pets</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>Customer Pets</h1>
+    <!-- Add separate search fields for pet name and pet type -->
+    <div class="wrapper">
+        <div class="container">
+            <label for="searchName">Search by pet name:</label>
+            <input type="text" id="searchName" oninput="searchPets()">
+        </div>
+        <div class="container">
+            <label for="searchType">Search by pet type:</label>
+            <input type="text" id="searchType" oninput="searchPets()">
+        </div>
+        <div class="container">
+        <p id="error" style="color: red;"></p>
+        </div>
+        <table>
+            <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>Birthday</th>
+                    <th>Favorite Color</th>
+                    <th>Pets</th>
+                </tr>
+            </thead>
+            <tbody id="customerTable">
+            </tbody>
+        </table>
+    </div>
+
+    <!-- Add the following modal structure -->
+    <div id="petsModal" class="modal">
+        <div class="modal-content">
+            <h3>Pets</h3>
+            <ul id="petsList"></ul>
+            <button onclick="closeModal()">Close</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
